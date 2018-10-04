@@ -17,8 +17,8 @@ end
 
 def apply_coupons(cart, coupons)
   
-  #cart = {"AVOCADO"=>{:price=>3.0, :clearance=>true, :count=>2}}
-  
+  # cart = {"AVOCADO"=>{:price=>3.0, :clearance=>true, :count=>2}}
+  # coupons = [{:item=>"AVOCADO", :num=>2, :cost=>5.0}]
 
 binding.pry
 
