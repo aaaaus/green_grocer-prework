@@ -24,7 +24,8 @@ def apply_coupons(cart, coupons)
   
   cart.each do | food , food_info |
     coupons.each do | coupon_info |
-      
+      if food == coupon_info[:item] && food_info[:count] >= coupon_info[:num]
+        
   
   
   
