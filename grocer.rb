@@ -16,6 +16,9 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
+  
+  #cart = {"AVOCADO"=>{:price=>3.0, :clearance=>true, :count=>2}}
+  
 
 binding.pry
 
