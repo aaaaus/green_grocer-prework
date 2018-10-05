@@ -58,7 +58,7 @@ end
   # return cart
 
 def apply_clearance(cart)
-  binding.pry
+
   cart.collect do | food , food_info |
     if food_info[:clearance] == true
       food_info[:price] = food_info[:price] * 0.80
