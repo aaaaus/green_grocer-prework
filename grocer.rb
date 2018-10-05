@@ -68,9 +68,9 @@ def apply_clearance(cart)
 end
 
 def checkout(cart, coupons)
-  consolidate_cart(cart)
-  apply_coupons(cart, coupons)
-  apply_clearance(cart)
+  cart = consolidate_cart(cart)
+  cart = apply_coupons(cart, coupons)
+  cart = apply_clearance(cart)
   total = 0
   cart.each do | food, food_info |
     total += (food_info[:price] * food_info[:count]).to_f
