@@ -72,7 +72,7 @@ def checkout(cart, coupons)
   apply_clearance(cart)
   total = 0
   cart.each do | food, food_info |
-    total += food_info[:price] * food_info[:count]
+    total += (food_info[:price] * food_info[:count]).to_f
   if total > 100
     total = ("%0.1f" % (total * 0.9)).to_f
   end
