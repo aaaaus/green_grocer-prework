@@ -32,14 +32,11 @@ def apply_coupons(cart, coupons)
           final_cart[food + " W/COUPON"] = {:price => coupon_info[:cost], :clearance => food_info[:clearance], :count => 1 }
         end
       end
+    end
       final_cart[food] = food_info
     end
-    return final_cart
-  end
-  
-  
-  
-  
+  return final_cart
+end
   
   
 
@@ -78,7 +75,6 @@ def apply_coupons(cart, coupons)
   #   end
   # end
   # return cart
-end
 
 def apply_clearance(cart)
   # code here
