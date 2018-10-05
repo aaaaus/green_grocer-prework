@@ -25,7 +25,18 @@ def apply_coupons(cart, coupons)
   cart.each do | food , food_info |
     coupons.each do | coupon_info |
       if food == coupon_info[:item] && food_info[:count] >= coupon_info[:num]
-        
+        food_info[:count] = food_info[:count] - coupon_info[:num]
+        if final_cart[food + " W/COUPON"]
+          final_cart[food + " W/COUPON"][:count] += 1
+        else
+          final_cart[food + " W/COUPON"] = {:price => coupon_info[:cost], :clearance => food_info[:clearance], :count => 1 }
+        end
+      end
+      final_cart[food] = food_info
+    end
+    return final_cart
+  end
+  
   
   
   
