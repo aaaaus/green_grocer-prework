@@ -70,6 +70,8 @@ end
 def checkout(cart, coupons)
   apply_coupons(cart, coupons)
   apply_clearance(cart)
+  total = 0
+  
   if total > 100
     total = ("%0.1f" % (total * 0.9)).to_f
   end
